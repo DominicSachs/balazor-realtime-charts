@@ -1,0 +1,35 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<div class="row">
+  <div class="col">
+    <RadzenChart>
+      <RadzenColumnSeries Data="@Data" CategoryProperty="Label" Title="Product Views" LineType="LineType.Dashed" ValueProperty="Value" Fill="blue" />
+      <RadzenColumnOptions Radius="5" />
+      <RadzenValueAxis>
+        <RadzenGridLines Visible="true" />
+        <RadzenAxisTitle Text="Product views" />
+      </RadzenValueAxis>
+      <RadzenLegend Visible="false" />
+    </RadzenChart>
+  </div>
+</div>
+
+<div class="row">
+  @foreach (var group in CategoryData)
+  {
+    <div class="col-md-6">
+      <RadzenChart>
+        <RadzenColumnSeries Data="@group.Value" CategoryProperty="Label" Title="@group.Key" LineType="LineType.Dashed" ValueProperty="Value" Fill="green" />
+        <RadzenColumnOptions Radius="5" />
+        <RadzenValueAxis>
+          <RadzenGridLines Visible="true" />
+        </RadzenValueAxis>
+      </RadzenChart>
+    </div>
+  }
+</div>
+
+
+1
