@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      Solution_Name: BalazorRealtimeCharts.sln      
+      Solution_Name: ./BalazorRealtimeCharts.sln      
     
     steps:
     - name: Checkout
@@ -25,7 +25,7 @@ jobs:
         dotnet-version: 7.0.x
 
     - name: Restore dependencies
-      run: dotnet restore $env:Solution_Name
+      run: dotnet restore ${{ env:Solution_Name }}
 
     - name: Build
-      run: dotnet build $env:Solution_Name --no-restore
+      run: dotnet build ${{ env:Solution_Name }} --no-restore
