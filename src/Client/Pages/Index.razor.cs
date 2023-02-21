@@ -29,7 +29,7 @@ public partial class Index : IAsyncDisposable
 
     private void ListenForData()
     {
-        _hubConnection.On<List<MealItem>>("SendSalesData", (data) =>
+        _hubConnection!.On<List<MealItem>>("SendSalesData", (data) =>
         {
             var groups = data.GroupBy(g => g.Category).OrderBy(o => o.Key);
             Data = groups.Select(s => new ChartLine(s.Key.ToString(), s.Sum(i => i.Count))).ToList();
