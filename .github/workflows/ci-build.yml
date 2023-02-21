@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      Solution_Name: ./BalazorRealtimeCharts.sln      
+      Solution_Name: BalazorRealtimeCharts.sln      
     
     steps:
     - name: Checkout
