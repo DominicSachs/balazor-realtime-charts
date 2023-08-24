@@ -8,6 +8,6 @@
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.10" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.10" PrivateAssets="all" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.10" />
-    <PackageVersion Include="Radzen.Blazor" Version="4.15.6" />
+    <PackageVersion Include="Radzen.Blazor" Version="4.15.7" />
   </ItemGroup>
 </Project>
